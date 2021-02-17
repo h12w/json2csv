@@ -16,6 +16,7 @@ func main() {
 
 func run() error {
 	dec := json.NewDecoder(os.Stdin)
+	dec.UseNumber()
 	var header Header
 	w := csv.NewWriter(os.Stdout)
 	for {
